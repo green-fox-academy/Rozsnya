@@ -31,5 +31,6 @@ int main(int argc, char* args[]) {
             }
         std::cout << std::endl;
     }
+    system("PAUSE");
     return 0;
 }
