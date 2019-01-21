@@ -2,14 +2,14 @@
 #include <string>
 #include <vector>
 
-std::vector<std::string> putSaturn(const std::vector<std::string>& planets)
-{
-return planets;
+std::vector<std::string> putSaturn(const std::vector<std::string> &planets) {
+    std::vector<std::string> planets2 = planets;
+    planets2.insert(planets2.begin() + 5, "Saturn");
+    return planets2;
 }
 
-int main(int argc, char* args[])
-{
-    std::vector<std::string> planets = {"Mercury","Venus","Earth","Mars","Jupiter","Uranus","Neptune"};
+int main(int argc, char *args[]) {
+    std::vector<std::string> planets = {"Mercury", "Venus", "Earth", "Mars", "Jupiter", "Uranus", "Neptune"};
 
 
     // Saturn is missing from the planetList
@@ -19,11 +19,11 @@ int main(int argc, char* args[])
     // Expected output: Mercury Venus Earth Mars Jupiter Saturn Uranus Neptune
 
 
-    planets.insert(planets.begin() + 5, "Saturn");
+
     std::vector<std::string> correctPlanets = putSaturn(planets);
 
 
-    for(int i = 0; i < correctPlanets.size(); ++i) {
+    for (int i = 0; i < correctPlanets.size(); ++i) {
         std::cout << correctPlanets[i] << " ";
     }
 
