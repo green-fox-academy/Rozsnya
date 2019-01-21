@@ -15,11 +15,15 @@ int main() {
     //
     // - Print this two dimensional array to the output
 
+    int userInput;
+    std::cout << "Give me a number" << std::endl;
+    std::cin >> userInput;
 
-    int matrix[5][5];
+
+    int matrix[userInput][userInput];
     int k = 0;
-    for (int i = 0; i < 5 ; i++){
-        for (int j = 0; j < 5; j++){
+    for (int i = 0; i < userInput ; i++){
+        for (int j = 0; j < userInput; j++){
             if(j == k){
                 matrix[i][j] = 1;
             }else{
@@ -28,8 +32,8 @@ int main() {
         }k++;
     }
 
-    for (int i = 0; i < 5 ; i++){
-        for(int j = 0; j < 5; j++){
+    for (int i = 0; i < userInput ; i++){
+        for(int j = 0; j < userInput; j++){
             std::cout << matrix[i][j] << " ";
         }
         std::cout << std::endl;

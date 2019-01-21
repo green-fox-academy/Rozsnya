@@ -30,7 +30,7 @@ int main() {
         std::cout << "The party is excellent!" << std::endl;
     }else if((boys + girls) >= 20 && boys != girls){
         std::cout << "Quite cool party!" << std::endl;
-    }else if ((boys + girls) < 20){
+    }else if ((boys + girls) < 20 && girls != 0){
         std::cout << "Avarage party..." << std::endl;
     }else if (girls == 0) {
         std::cout << "Sausage party" << std::endl;
