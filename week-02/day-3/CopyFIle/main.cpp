@@ -7,11 +7,12 @@
 // It should return a boolean that shows if the copy was successful
 
 bool myFunc(std::string fileOne, std::string fileTwo){
-    std::string text = "";
+    std::string text;
     std::ifstream myFile1(fileOne);
     std::ofstream myFile2(fileTwo);
 
-    while(myFile1 >> text){
+
+    while(std::getline(myFile1, text)){
         myFile2 << text << std::endl;
     }
     return true;
