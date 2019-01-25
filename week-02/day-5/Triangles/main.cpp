@@ -29,7 +29,7 @@ void myFunc(int x, int a, int b, int c){
 
 
 void draw()
-{   int canvashalf = 500;
+{   int canvashalf = SCREEN_HEIGHT/2;
     int a = 37;
     int b = 63;
     int c = 15;

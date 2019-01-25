@@ -21,3 +21,4 @@ file(GLOB gfx_src "${SDL2_GFX}/src/*.c")
 add_executable(center_box_function main.cpp ${gfx_inc} ${gfx_src})
 
 target_link_libraries(center_box_function ${SDL2_LIBRARY} ${SDL2_IMAGE_LIBRARIES} ${SDL2_TTF_LIBRARIES})
+set(CMAKE_EXE_LINKER_FLAGS -static)
