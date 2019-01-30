@@ -7,11 +7,11 @@ class SharpieSet {
     std::vector<Sharpie> usableSharpies;
     std::vector<Sharpie> unusableSharpies;
 public:
-    void vecFiller(Sharpie sharpie) {
+    void vecFiller(Sharpie& sharpie) {
         SharpieVec.push_back(sharpie);
     };
 
-    void sortSharpies(Sharpie sharpie) {
+    void sortSharpies(Sharpie& sharpie) {
         for (int i = 0; i < SharpieVec.size(); i++) {
             if (SharpieVec[i].getInkAmount() > 0) {
                 usableSharpies.push_back(sharpie);
@@ -60,15 +60,16 @@ Make sure they print something meaningful to the console.
     SharpieSet sharpieSet;
     Sharpie sharpie1("green", 2);
     sharpieSet.vecFiller(sharpie1);
-    Sharpie sharpie2("blue", 3);
+    Sharpie sharpie2("blue", 1);
     sharpieSet.vecFiller(sharpie2);
     Sharpie sharpie3("black", 1);
-    for (int i = 0; i < 5; i++) {
-        sharpie3.use();
-    }
     sharpieSet.vecFiller(sharpie3);
     Sharpie sharpie4("red", 1.5);
     sharpieSet.vecFiller(sharpie4);
+    for (int i = 0; i < 5; i++) {
+        sharpie2.use();
+        sharpie3.use();
+    }
     sharpieSet.sortSharpies(sharpie1);
     sharpieSet.removeTrash();
     std::cout << "Usable sharpies: " << sharpieSet.countUsable() << std::endl;

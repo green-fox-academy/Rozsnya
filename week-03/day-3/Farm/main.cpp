@@ -35,7 +35,7 @@ public:
                 }
         }
     }
-    void animalToFarm(Animal animal) {
+    void animalToFarm(Animal& animal) {
         animals.push_back(animal);
     }
 };
@@ -57,11 +57,14 @@ int main() {
     Animal ani3;
     Tanya.animalToFarm(ani3);
     for (int i = 0; i < 40; i++){
-        ani2.play();
+        ani2.eat();
     }
     Tanya.breed();
     Tanya.breed();
     Tanya.slaughter();
+    Tanya.breed();
+    Tanya.breed();
+    Tanya.breed();
     Tanya.breed();
 
 
