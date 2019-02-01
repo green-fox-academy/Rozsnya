@@ -2,8 +2,9 @@
 #include "Pirate.h"
 #include "Ship.h"
 #include <vector>
-
+#include <ctime>
 int main() {
+    srand(time(NULL));
 /*
 Create a Ship class.
 The Ship stores Pirate-s instances in a vector as the crew and has one captain who is also a Pirate.
@@ -20,7 +21,18 @@ calculate score: Number of Alive pirates in the crew - Number of consumed rum by
 The loser crew has a random number of losses (deaths).
 The winner captain and crew has a party, including a random number of rum :)
  */
-
-
+Ship Ship1;
+Ship1.fillShip();
+Ship Ship2;
+Ship2.fillShip();
+Ship1.shipPrint();
+Ship2.shipPrint();
+if(Ship1.shipBattle(Ship2)){
+    std::cout << "Ship1 win" << std::endl;
+} else {
+    std::cout << "Ship2 win" << std::endl;
+}
+    Ship1.shipPrint();
+    Ship2.shipPrint();
     return 0;
 }

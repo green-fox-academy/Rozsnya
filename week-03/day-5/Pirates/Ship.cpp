@@ -5,8 +5,10 @@
 #include "Ship.h"
 #include <vector>
 #include <iostream>
+#include <ctime>
+
 void Ship::fillShip(){
-    for(int i = 0; i < rand() % 25; i++){
+    for(int i = 0; i < rand() % 25 ; i++){
         pirateShip.push_back(Pirate(rand() % 2));
     }
         pirateShip.push_back(Pirate());
@@ -59,10 +61,14 @@ bool Ship::shipBattle(Ship &ship) {
     if((crew - capRumLev) < (otherCrew - otherCapRumLev)){
         for(int i = 0; i < pirateShip.size(); i++){
             pirateShip[i].die();
+            ship.getPirateShip()[i].drinkSomeRum();
+            ship.getPirateShip()[i].drinkSomeRum();
         }
     } else{
         for(int i = 0; i < ship.pirateShip.size(); i++){
             ship.getPirateShip()[i].die();
+            pirateShip[i].drinkSomeRum();
+            pirateShip[i].drinkSomeRum();
         }
     }
     return (crew - capRumLev) > (otherCrew - otherCapRumLev) ? true : false;
