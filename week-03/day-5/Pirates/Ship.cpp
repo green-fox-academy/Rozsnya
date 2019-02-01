@@ -5,7 +5,12 @@
 #include "Ship.h"
 #include <vector>
 #include <iostream>
-
+void Ship::fillShip(){
+    for(int i = 0; i < rand() % 25; i++){
+        pirateShip.push_back(Pirate(rand() % 2));
+    }
+        pirateShip.push_back(Pirate());
+};
 void Ship::fillShip(Pirate &pirate) {
     pirateShip.push_back(pirate);
 };

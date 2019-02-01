@@ -21,38 +21,6 @@ The loser crew has a random number of losses (deaths).
 The winner captain and crew has a party, including a random number of rum :)
  */
 
-    Ship myShip;
-    Pirate Captain;
-    Pirate pirate1(0);
-    Pirate pirate2(1);
-    myShip.fillShip(Captain);
-    myShip.fillShip(pirate1);
-    myShip.fillShip(pirate2);
-    myShip.shipPrint();
-    myShip.getPirateShip()[0].drinkSomeRum();
-    myShip.getPirateShip()[0].drinkSomeRum();
-    myShip.shipPrint();
-    //
-    Ship otherShip;
-    Pirate otherCaptain;
-    Pirate otherPirate1(0);
-    Pirate otherPirate2(0);
-    otherShip.fillShip(otherCaptain);
-    otherShip.fillShip(otherPirate1);
-    otherShip.fillShip(otherPirate2);
-    otherShip.getPirateShip()[0].drinkSomeRum();
-    otherShip.getPirateShip()[0].drinkSomeRum();
-    otherShip.getPirateShip()[0].drinkSomeRum();
-    otherShip.getPirateShip()[0].drinkSomeRum();
-
-    if(myShip.shipBattle(otherShip)){
-        std::cout << "myShip won" << std::endl;
-    } else {
-        std::cout << "otherShip won" << std::endl;
-    }
-    myShip.shipPrint();
-    otherShip.shipPrint();
-
 
     return 0;
 }

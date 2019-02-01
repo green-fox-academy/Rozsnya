@@ -11,6 +11,7 @@
 class Ship {
 public:
     void fillShip(Pirate &pirate);
+    void fillShip();
 
     int shipPrint();
 
