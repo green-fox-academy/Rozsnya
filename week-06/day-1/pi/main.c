@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#define PI 3.14
 
 // define a variable called PI with the value of 3.14
 // create a function which takes the radius of a circle as a parameter
@@ -7,7 +8,6 @@
 // area = radius * radius * PI
 float radiusFunc(float radius){
     float area;
-    float PI = 3.14;
     area = radius * radius * PI;
 
 
