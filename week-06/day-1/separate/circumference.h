@@ -4,10 +4,10 @@
 
 #ifndef SEPARATE_CIRCUMFERENCE_H
 #define SEPARATE_CIRCUMFERENCE_H
+#define PI 3.14
 
 float circumferenceFunc(float radius){
     float circumference;
-    float PI = 3.14;
     circumference = 2 * radius * PI;
 
 
