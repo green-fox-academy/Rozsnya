@@ -63,6 +63,12 @@ void bestExam()
         }
     }
     printf("The best exam: %d. class, %d. student, %d percent.", bestClassIndex, bestStudentIndex, bestPercent);
+
+    for(int i = 0; i < best_data.classes; i++){
+        free(best_data.ptr[i]);
+    }
+    free(best_data.ptr);
+    free(best_data.students);
 }
 void examAverage()
 {
@@ -77,6 +83,12 @@ void examAverage()
     }
     float avgResult = examResults/studentNumber;
     printf("Exam result is: %.2f%%", avgResult);
+
+    for(int i = 0; i < avg_data.classes; i++){
+        free(avg_data.ptr[i]);
+    }
+    free(avg_data.ptr);
+    free(avg_data.students);
 }
 int main()
 {
